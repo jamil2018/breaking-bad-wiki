@@ -1,38 +1,212 @@
-.App {
+:root {
+  --bg: #111111;
+  --bg-secondary: #1b1b1b;
+  --typography: #d1d1d1;
+  --typography-primary: #24752f;
+}
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: "roboto", sans-serif;
+  background: var(--bg);
+  color: var(--typography);
+}
+
+/* typography */
+.title {
+  color: var(--typography-primary);
+  text-transform: capitalize;
+  text-align: center;
+  font-size: 2.5rem;
+}
+.text-center {
   text-align: center;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+/* container */
+.container {
+  max-width: 85vw;
+  margin: auto;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
+/* navbar */
+.navbar {
+  margin-bottom: 3rem;
+  background: var(--bg-secondary);
+}
+.navbar-nav {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0.5rem 0rem;
+}
+.nav-title {
+  color: var(--typography-primary);
+  font-size: 1.2rem;
+  text-decoration: none;
+  outline: none;
+}
+.nav-title img {
+  height: 70px;
+}
+.nav-links {
+  display: flex;
+  list-style: none;
+}
+.nav-links li {
+  margin-left: 3rem;
+}
+.nav-links a {
+  text-decoration: none;
+  color: inherit;
+  transition: 0.3s;
+}
+.nav-links a:hover {
+  color: var(--typography-primary);
+}
+.navbar .active {
+  color: var(--typography-primary);
+}
+/* characters */
+.characters {
+  margin: 1rem 0rem;
+}
+.loader {
+  display: grid;
+  place-items: center;
+  height: 70vh;
+}
+.character-cards-container {
+  display: flex;
+  margin: 2rem 0rem;
+  flex-direction: column;
+  align-items: center;
+}
+.character-card {
+  background: var(--bg-secondary);
+  display: flex;
+  width: 50%;
+  margin: 1rem 0rem;
+}
+.character-img {
+  width: 35%;
+  height: 300px;
+}
+.character-details {
+  padding: 0rem 1.5rem;
+  width: 65%;
+}
+.character-title {
+  font-size: 1.5rem;
+  padding: 1rem 0rem;
+  color: var(--typography-primary);
+  font-weight: bold;
+  text-align: center;
+}
+.detail-group {
+  padding: 0.4rem 0rem;
+  display: flex;
+  justify-content: space-between;
+  font-size: 0.9rem;
+}
+.detail-title {
+  width: 47.5%;
+  text-align: right;
+}
+.detail-data {
+  width: 47.5%;
 }
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
+/* search */
+.search-container {
+  display: flex;
+  justify-content: center;
+  margin: 1rem 0rem;
+}
+.search-bar {
+  width: 30%;
+  padding: 0.5rem;
+  font-size: 0.9rem;
+  color: var(--typography);
+  background: none;
+  border: 2px solid var(--typography-primary);
+  border-radius: 5px;
+  outline: none;
+  text-align: center;
+  transition: 0.3s;
+}
+
+/* pagination */
+.pagination {
+  display: flex;
+  justify-content: center;
+  margin: 2rem 0rem;
+}
+.pagination-button {
+  padding: 0.5rem 1rem;
+  border: 1px solid var(--typography-primary);
+  margin: 0rem 0.5rem;
+  border-radius: 5px;
+  transition: background 0.3 ease-in-out;
+}
+.pagination-button:hover {
+  background: #0688174b;
+  cursor: pointer;
+}
+.pagination-button.active {
+  background: #0688174b;
+  cursor: default;
+}
+/* episodes */
+.episodesList {
+  margin: 2rem 0rem;
+}
+.season:not(:last-child) {
+  margin-bottom: 5rem;
+}
+.season-title {
+  color: var(--typography-primary);
+  margin-bottom: 2rem;
+  width: 70%;
+  margin: auto;
+}
+.episode {
+  margin: 1rem auto;
+  width: 70%;
+  background: var(--bg-secondary);
+  padding: 1rem;
+  display: flex;
+}
+.episode-number {
+  width: 15%;
   display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+  font-size: 1.2rem;
+  border-right: 1px solid var(--typography-primary);
+  margin-right: 1rem;
 }
-
-.App-link {
-  color: #61dafb;
+.episode-number span {
+  margin: 0.5rem 0rem;
 }
-
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+.episode-details {
+  width: 85%;
+}
+.episode-detail-group {
+  margin: 0.5rem 0rem;
+  display: flex;
+  justify-content: space-between;
+}
+.episode-detail-title {
+  width: 20%;
+  text-align: right;
+  margin-right: 0.5rem;
+}
+.episode-detail-data {
+  width: 80%;
 }
