@@ -210,3 +210,27 @@ body {
 .episode-detail-data {
   width: 80%;
 }
+
+/* quotes */
+.quotestList {
+  margin: 2rem 0rem;
+}
+.quote {
+  max-width: 50%;
+  margin: 1rem auto;
+  background: var(--bg-secondary);
+  padding: 1rem;
+}
+.quotation {
+  font-size: 2rem;
+  padding: 0rem 0.3rem;
+}
+.quote-text {
+  font-size: 1.5rem;
+  margin-bottom: 1rem;
+  font-style: italic;
+  line-height: 2rem;
+}
+.quote-author {
+  margin-left: 0.5rem;
+}
