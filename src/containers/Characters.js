@@ -30,6 +30,9 @@ const Characters = () => {
   useEffect(() => {
     window.scrollTo(0, 0);
   }, [currentIndex]);
+  useEffect(() => {
+    setCurrentIndex(1);
+  }, [searchText]);
   const filteredCharacters = characters.filter((character) =>
     character.name.toLowerCase().includes(searchText.toLowerCase())
   );
